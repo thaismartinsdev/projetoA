@@ -6,10 +6,10 @@ import json
 gpio.setmode(gpio.BCM)
 
 gpio.setup(4, gpio.IN, pull_up_down = gpio.PUD_DOWN)
-gpio.setup(17, gpio.IN, pull_up_down = gpio.PUD_DOWN)
-gpio.setup(27, gpio.IN, pull_up_down = gpio.PUD_DOWN)
-gpio.setup(22, gpio.IN, pull_up_down = gpio.PUD_DOWN)
-gpio.setup(24, gpio.IN, pull_up_down = gpio.PUD_DOWN)
+gpio.setup(16, gpio.IN, pull_up_down = gpio.PUD_DOWN)
+gpio.setup(13, gpio.IN, pull_up_down = gpio.PUD_DOWN)
+gpio.setup(19, gpio.IN, pull_up_down = gpio.PUD_DOWN)
+gpio.setup(26, gpio.IN, pull_up_down = gpio.PUD_DOWN)
 gpio.setup(5, gpio.IN, pull_up_down = gpio.PUD_DOWN)
 gpio.setup(6, gpio.IN, pull_up_down = gpio.PUD_DOWN)
 gpio.setup(12, gpio.IN, pull_up_down = gpio.PUD_DOWN)
@@ -34,7 +34,7 @@ while True:
 	time.sleep(1)
 
 
-	if(gpio.input(17) == 1):
+	if(gpio.input(16) == 1):
             try:
                 # requests.post('http://localhost:3000/change', json={"status":"true", "key":"2"})
                 # print('Chamando API')
@@ -51,7 +51,7 @@ while True:
 	time.sleep(1)
 
 
-	if(gpio.input(27) == 1):
+	if(gpio.input(13) == 1):
             try:
                 # requests.post('http://localhost:3000/change', json={"status":"true", "key":"3"})
                 # print('Chamando API')
@@ -67,7 +67,7 @@ while True:
                 print('ERROR')
 	time.sleep(1)
 
-	if(gpio.input(22) == 1):
+	if(gpio.input(19) == 1):
             try:
                 # requests.post('http://localhost:3000/change', json={"status":"true", "key":"4"})
                 # print('Chamando API')
@@ -84,7 +84,7 @@ while True:
 	time.sleep(1)
 
 
-	if(gpio.input(24) == 1):
+	if(gpio.input(26) == 1):
             try:
                 # requests.post('http://localhost:3000/change', json={"status":"true", "key":"5"})
                 # print('Chamando API')
